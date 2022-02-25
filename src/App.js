@@ -15,11 +15,11 @@ function App() {
 	}, []);
 	return (
 		<div className="App">
-			<h1>Meme Generator</h1>
+			<h1 className="meme-heading">Meme Generator</h1>
 			{meme === null ? (
 				<Template templates={templates} key={templates.id} setMeme={setMeme} />
 			) : (
-				<Meme meme={meme} />
+				<Meme meme={meme} setMeme={setMeme} />
 			)}
 		</div>
 	);
